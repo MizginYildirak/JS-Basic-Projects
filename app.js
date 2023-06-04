@@ -15,15 +15,21 @@ let texts = [
     "“But of bliss and glad life there is little to be said, before it ends; as works fair and wonderful, while they still endure for eyes to see, are ever their own record, and only when they are in peril or broken for ever do they pass into song.”"
 ]
 
-// counter = 0
-
 btn.addEventListener("click", () => {
+
     const value = parseInt(inputValue.value)
+    const random = Math.floor(Math.random() * texts.length)
 
-    const random = texts[Math.floor(Math.random() * texts.length)]
+    if (value === "" || isNaN(value) || value < 0 || value > 9 || value === 1) {
+        loremText.innerHTML = `<p>${texts[random]}</p>`
 
-    if (value === "" || isNaN(value) || value < 0 || value > 9 || value === 1) {
-       let newText = document.createElement("div")
-        loremText.innerHTML = random
-    }
-})
+    } else {
+        let tempText = texts.slice(0, value)
+        tempText = tempText.map(function(item){
+            return `<p>${item}</p>`
+        })
+        loremText.innerHTML = tempText
+    }});
+
+
+

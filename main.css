@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #93B5C6;
+    background-size: cover;
+}
+
+.container {
+    padding: 4rem;
+}
+
+.first {
+    width: 250px;
+    height: 250px;
+    background-image: url(./img/project1.png);
+    background-size: cover;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #93B5C6;
+    border: none;
+    border-radius: 2px;
+    font-size: smaller;
+    padding: 0.3rem;
+}
+
+a {
+    text-decoration-line: none;
+    color: white;
+}
