@@ -11,9 +11,19 @@ body {
 
 .container {
     padding: 4rem;
+    display: flex;
+    gap: 2rem;
 }
 
 .first {
+    width: 250px;
+    height: 250px;
+    background-image: url(./img/project1.png);
+    background-size: cover;
+    border-radius: 3px;
+}
+
+.second {
     width: 250px;
     height: 250px;
     background-image: url(./img/project1.png);
