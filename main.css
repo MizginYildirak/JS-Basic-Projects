@@ -19,15 +19,15 @@ body {
     width: 250px;
     height: 250px;
     background-image: url(./img/project1.png);
-    background-size: cover;
+    background-size: contain;
     border-radius: 3px;
 }
 
 .second {
     width: 250px;
     height: 250px;
-    background-image: url(./img/project1.png);
-    background-size: cover;
+    background-image: url(./ProjectSecond/img/image-1.png);
+    background-size: contain;
     border-radius: 3px;
 }
 

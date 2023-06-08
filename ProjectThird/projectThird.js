@@ -28,16 +28,17 @@ for (let i = 0; i < companyBtn.length; i++) {
 }
 
 searchInput.onkeyup = () => {
-    let search = searchInput.value.toLowerCase();
+    let search = searchInput.value.toLowerCase()
 
     Array.from(productName).forEach(item => {
-        let el = item.innerHTML.toLowerCase();
-        let productItem = item.closest('.product');
+       let el = item.innerHTML.toLowerCase()
+       let productItem = item.closest(".product") 
 
-        if (el.indexOf(search) === -1) {
-            productItem.style.display = "none";
-        } else {
-            productItem.style.display = "block";
-        }
-    });
-};
+       if (el.indexOf(search) === -1) {
+        productItem.style.display = "none"
+       } else if (el.indexOf(search) !== -1 || searchInput.value === "") {
+        productItem.style.display = "block"
+       }
+    })
+}
+
