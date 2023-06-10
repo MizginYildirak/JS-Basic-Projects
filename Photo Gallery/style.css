@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1170px;
+  padding: 5rem 0;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+img {
+  height: 15rem;
+  width: 100%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* .modal.open {
+    opacity: 1;
+    z-index: 999;
+} */
+
+.fa-solid {
+  color: white;
+  border: 1px solid black;
+  outline: none;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: black;
+  overflow: scroll;
+  min-height: 100vh;
+  z-index: -4;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.modal-content {
+  padding-top: 7rem;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1170px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.close-btn {
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  font-size: 50px;
+  background-color: black;
+}
+
+.modal-images {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.modal-img {
+  height: 5rem;
+  object-fit: cover;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  opacity: 0.5;
+  width: 100%;
+}
+
+button {
+  border: none;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 30px;
+  font-weight: 800;
+  padding: 2rem;
+  background-color: black;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+}
