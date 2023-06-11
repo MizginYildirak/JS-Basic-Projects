@@ -1,6 +1,6 @@
-const btn = document.querySelector(".btn");
-const inputValue = document.getElementById("amount");
-const loremText = document.querySelector(".lorem-text");
+const btn = document.querySelector(".btn")
+const inputValue = document.getElementById("amount")
+const loremText = document.querySelector(".lorem-text")
 
 let texts = [
   "“wandering in the summer in the woods of Neldoreth [Beren] came upon Lúthien, daughter of Thingol and Melian, at a time of evening under moonrise, as she danced upon the unfading grass in the glades beside Esgalduin. Then all memory of his pain departed from him, and he fell into an enchantment; for Lúthien was the most beautiful of all the Children of Ilúvatar. Blue was her raiment as the unclouded heaven, but her eyes were grey as the starlit evening; her mantle was sewn with golden flowers, but her hair was dark as the shadows of twilight. As the light upon the leaves of trees, as the voice of clear waters, as the stars above the mists of the world, such was her glory and her loveliness; and in her face was a shining light.”",
@@ -16,15 +16,15 @@ let texts = [
 ];
 
 btn.addEventListener("click", () => {
-  const value = parseInt(inputValue.value);
-  const random = Math.floor(Math.random() * texts.length);
+  const value = parseInt(inputValue.value)
+  const random = Math.floor(Math.random() * texts.length)
 
   if (value === "" || isNaN(value) || value < 0 || value > 9 || value === 1) {
-    loremText.innerHTML = `<p>${texts[random]}</p>`;
+    loremText.innerHTML = `<p>${texts[random]}</p>`
   } else {
-    let tempText = texts.slice(0, value);
+    let tempText = texts.slice(0, value)
     tempText = tempText.map(function (item) {
-      return `<p>${item}</p>`;
+      return `<p>${item}</p>`
     });
     loremText.innerHTML = tempText;
   }
