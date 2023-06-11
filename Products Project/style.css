@@ -23,7 +23,6 @@ h3,
 h4,
 h5 {
   margin: 0;
-  margin-bottom: 1.38rem;
   font-weight: 400;
   line-height: 1.3;
   text-transform: capitalize;
@@ -32,6 +31,7 @@ h5 {
 
 h2 {
   font-size: 2.441rem;
+  margin-bottom: 1.38rem;
 }
 
 .title-underline {
@@ -139,9 +139,25 @@ footer span {
   height: 1rem;
   border-radius: 50%;
   background: #222;
-  margin: 0.5rem 0.5rem 0.25rem 0;
+  margin: 0.5rem 0 0.25rem 0;
 }
 
 .product-info {
   padding-top: 1rem;
+}
+
+.sub-title,
+.colors {
+  color: #64748b;
+  margin: 0;
+  margin: 5px 0;
+  font-size: 25px;
+}
+
+.product-title {
+  font-size: 30px;
+}
+
+.product-info p {
+  margin-bottom: 1.25rem;
 }
