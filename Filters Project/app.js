@@ -12,8 +12,8 @@ for (let i = 0; i < companyBtn.length; i++) {
       case "all":
         Array.from(product).forEach((item) => {
           item.style.display = "block"
-        });
-        break;
+        })
+        break
       default:
         Array.from(product).forEach((item) => {
           if (item.getAttribute("data-id") === dataId) {
