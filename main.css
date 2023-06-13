@@ -10,33 +10,78 @@ body {
 }
 
 .container {
+    height: 100vh;
     padding: 4rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
     gap: 2rem;
 }
 
-.first {
+.first-project {
     width: 250px;
     height: 250px;
     background-image: url(./img/project1.png);
     background-size: contain;
     border-radius: 3px;
+    position: relative;
 }
 
-.second {
+.second-project {
     width: 250px;
     height: 250px;
-    background-image: url(./ProjectSecond/img/image-1.png);
+    background-image: url(./DarkMode/darkMode.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+    position: relative;
+}
+.third-project {
+    height: 100vh;
+    width: 250px;
+    height: 250px;
+    background-image: url(./FiltersProject/img/filters.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+    position: relative;
+}
+
+.fourth-project {
+    width: 250px;
+    height: 250px;
+    background-image: url(./PhotoGallery/img/gallery.png);
     background-size: contain;
     border-radius: 3px;
+    position: relative;
+}
+
+.fifth-project {
+    width: 250px;
+    height: 250px;
+    background-image: url(./ProductsProject/products.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+    position: relative;
 }
 
 button {
     background-color: #93B5C6;
+    width: 100px;
+    align-items: center;
     border: none;
     border-radius: 2px;
     font-size: smaller;
     padding: 0.3rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 10px;
 }
 
 a {
@@ -44,4 +89,12 @@ a {
     color: white;
 }
 
+.p1, .p2, .p3, .p4, .p5 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: smaller;
+}
 
