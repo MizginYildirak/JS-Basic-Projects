@@ -13,8 +13,8 @@ img.forEach((item) => {
 
     showMainImage(event)
     modalImages(event)
-  });
-});
+  })
+})
 
 function showMainImage(event) {
   mainImg.src = event.currentTarget.src
