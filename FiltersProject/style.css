@@ -30,7 +30,7 @@ body {
 }
 
 .navbar-toggler {
-
+  display: none;
   font-size: 2.5rem;
   background-color: transparent;
   border: 1px solid transparent;
