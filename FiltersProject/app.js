@@ -4,6 +4,11 @@ const searchInput = document.querySelector(".search-input")
 const product = document.querySelectorAll(".product")
 const productName = document.querySelectorAll(".product-name")
 
+function toggleMenu(e) {
+  e.classList.toggle("active");
+  document.querySelector(".company-titles").classList.toggle("active");
+}
+
 for (let i = 0; i < companyBtn.length; i++) {
   companyBtn[i].addEventListener("click", (event) => {
     const dataId = event.currentTarget.getAttribute("data-id")

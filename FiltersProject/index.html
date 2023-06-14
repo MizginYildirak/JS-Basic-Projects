@@ -1,134 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filters</title>
 
-    <link rel="stylesheet" href="../FiltersProject/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filters</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <link rel="stylesheet" href="../FiltersProject/style.css" />
 
-  <body>
-    <section class="products">
-      <div class="filters-container">
-        <form action="input-form">
-          <input type="text" class="search-input" placeholder="search..." />
-        </form>
-        <h5>Company</h5>
-        <article class="companies">
-          <button class="company-btn" data-id="all">all</button>
-          <button class="company-btn" data-id="ikea">ikea</button>
-          <button class="company-btn" data-id="marcos">marcos</button>
-          <button class="company-btn" data-id="caressa">caressa</button>
-          <button class="company-btn" data-id="liddy">liddy</button>
-        </article>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <section class="products">
+    <div class="filters-container">
+      <form action="input-form">
+        <input type="text" class="search-input" placeholder="search..." />
+      </form>
+      <div class="toggle-wrap">
+        <button class="navbar-toggler text-white" onclick="toggleMenu(this)" type="button">
+          ☰
+        </button>
+        <div class="company-titles collapse navbar-collapse" id=" collapsingNavbar">
+          <h5>Company</h5>
+          <article class="companies">
+            <button class="company-btn" data-id="all">all</button>
+            <button class="company-btn" data-id="ikea">ikea</button>
+            <button class="company-btn" data-id="marcos">marcos</button>
+            <button class="company-btn" data-id="caressa">caressa</button>
+            <button class="company-btn" data-id="liddy">liddy</button>
+          </article>
+        </div>
       </div>
-      <div class="products-container">
-        <article class="product" data-id="ikea">
-          <img
-            src="./img/product-1.jpeg"
-            class="product-img img"
-            data-id="ikea"
-            alt="ikea"
-          />
-          <footer>
-            <h5 class="product-name">high-back bench</h5>
-            <span class="product-price">9.99</span>
-          </footer>
-        </article>
-        <article class="product" data-id="marcos">
-          <img
-            src="./img/product-2.jpeg"
-            class="product-img img"
-            data-id="ikea"
-            alt="ikea"
-          />
-          <footer>
-            <h5 class="product-name">albany table</h5>
-            <span class="product-price">79.99</span>
-          </footer>
-        </article>
-        <article class="product" data-id="caressa">
-          <img src="./img/product-3.jpeg" class="product-img img" alt="" />
-          <footer>
-            <h5 class="product-name">accent chair</h5>
-            <span class="product-price">25.99</span>
-          </footer>
-        </article>
-        <article class="product" data-id="caressa">
-          <img src="./img/product-4.jpeg" class="product-img img" alt="" />
-          <footer>
-            <h5 class="product-name">wooden table</h5>
-            <span class="product-price">45.99</span>
-          </footer>
-        </article>
-        <article class="product" data-id="caressa">
-          <img src="./img/product-5.jpeg" class="product-img img" alt="" />
-          <footer>
-            <h5 class="product-name">dining table</h5>
-            <span class="product-price">6.99</span>
-          </footer>
-        </article>
-        <article class="product" data-id="liddy">
-          <img src="./img/product-6.jpeg" class="product-img img" alt="" />
-          <footer>
-            <h5 class="product-name">sofa set</h5>
-            <span class="product-price">69.99</span>
-          </footer>
-        </article>
-        <article class="product" data-id="marcos">
-          <img src="./img/product-7.jpeg" class="product-img img" alt="" />
-          <footer>
-            <h5 class="product-name">modern bookshelf</h5>
-            <span class="product-price">8.99</span>
-          </footer>
-        </article>
-        <article class="product" data-id="liddy">
-          <img src="./img/product-8.jpeg" class="product-img img" alt="" />
-          <footer>
-            <h5 class="product-name">emperor bed</h5>
-            <span class="product-price">21.99</span>
-          </footer>
-        </article>
-        <article class="product" data-id="marcos">
-          <img src="./img/product-9.jpeg" class="product-img img" alt="" />
-          <footer>
-            <h5 class="product-name">utopia sofa</h5>
-            <span class="product-price">39.95</span>
-          </footer>
-        </article>
-        <article class="product" data-id="liddy">
-          <img src="./img/product-10.jpeg" class="product-img img" alt="" />
-          <footer>
-            <h5 class="product-name">entertainment center</h5>
-            <span class="product-price">29.98</span>
-          </footer>
-        </article>
-        <article class="product" data-id="ikea">
-          <img src="./img/product-11.jpeg" class="product-img img" alt="" />
-          <footer>
-            <h5 class="product-name">albany sectional</h5>
-            <span class="product-price">10.99</span>
-          </footer>
-        </article>
-        <article class="product" data-id="liddy">
-          <img src="./img/product-12.jpeg" class="product-img img" alt="" />
-          <footer>
-            <h5 class="product-name">leather sofa</h5>
-            <span class="product-price">9.99</span>
-          </footer>
-        </article>
-      </div>
-    </section>
+    </div>
+    <div class="products-container">
+      <article class="product" data-id="ikea">
+        <img src="./img/product-1.jpeg" class="product-img img" data-id="ikea" alt="ikea" />
+        <footer>
+          <h5 class="product-name">high-back bench</h5>
+          <span class="product-price">9.99</span>
+        </footer>
+      </article>
+      <article class="product" data-id="marcos">
+        <img src="./img/product-2.jpeg" class="product-img img" data-id="ikea" alt="ikea" />
+        <footer>
+          <h5 class="product-name">albany table</h5>
+          <span class="product-price">79.99</span>
+        </footer>
+      </article>
+      <article class="product" data-id="caressa">
+        <img src="./img/product-3.jpeg" class="product-img img" alt="" />
+        <footer>
+          <h5 class="product-name">accent chair</h5>
+          <span class="product-price">25.99</span>
+        </footer>
+      </article>
+      <article class="product" data-id="caressa">
+        <img src="./img/product-4.jpeg" class="product-img img" alt="" />
+        <footer>
+          <h5 class="product-name">wooden table</h5>
+          <span class="product-price">45.99</span>
+        </footer>
+      </article>
+      <article class="product" data-id="caressa">
+        <img src="./img/product-5.jpeg" class="product-img img" alt="" />
+        <footer>
+          <h5 class="product-name">dining table</h5>
+          <span class="product-price">6.99</span>
+        </footer>
+      </article>
+      <article class="product" data-id="liddy">
+        <img src="./img/product-6.jpeg" class="product-img img" alt="" />
+        <footer>
+          <h5 class="product-name">sofa set</h5>
+          <span class="product-price">69.99</span>
+        </footer>
+      </article>
+      <article class="product" data-id="marcos">
+        <img src="./img/product-7.jpeg" class="product-img img" alt="" />
+        <footer>
+          <h5 class="product-name">modern bookshelf</h5>
+          <span class="product-price">8.99</span>
+        </footer>
+      </article>
+      <article class="product" data-id="liddy">
+        <img src="./img/product-8.jpeg" class="product-img img" alt="" />
+        <footer>
+          <h5 class="product-name">emperor bed</h5>
+          <span class="product-price">21.99</span>
+        </footer>
+      </article>
+      <article class="product" data-id="marcos">
+        <img src="./img/product-9.jpeg" class="product-img img" alt="" />
+        <footer>
+          <h5 class="product-name">utopia sofa</h5>
+          <span class="product-price">39.95</span>
+        </footer>
+      </article>
+      <article class="product" data-id="liddy">
+        <img src="./img/product-10.jpeg" class="product-img img" alt="" />
+        <footer>
+          <h5 class="product-name">entertainment center</h5>
+          <span class="product-price">29.98</span>
+        </footer>
+      </article>
+      <article class="product" data-id="ikea">
+        <img src="./img/product-11.jpeg" class="product-img img" alt="" />
+        <footer>
+          <h5 class="product-name">albany sectional</h5>
+          <span class="product-price">10.99</span>
+        </footer>
+      </article>
+      <article class="product" data-id="liddy">
+        <img src="./img/product-12.jpeg" class="product-img img" alt="" />
+        <footer>
+          <h5 class="product-name">leather sofa</h5>
+          <span class="product-price">9.99</span>
+        </footer>
+      </article>
+    </div>
+  </section>
 
-    <script src="../FiltersProject/app.js"></script>
-  </body>
+  <script src="../FiltersProject/app.js"></script>
+</body>
+
 </html>

@@ -84,3 +84,9 @@ body {
   --clr-primary: #ffa7c4;
   --clr-grey: #cbd5e1;
 }
+
+@media only screen and (max-width: 576px) {
+  .nav-center span {
+    font-size: 1.5rem;
+  }
+}
