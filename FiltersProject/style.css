@@ -114,6 +114,10 @@ img {
     justify-content: space-between;
   }
 
+  .navbar-toggler {
+    display: block;
+  }
+
   .products {
     grid-template-columns: none;
     padding: 0 2rem;
