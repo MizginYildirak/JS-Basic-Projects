@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Firebase_form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="form">
+            <h2>Login Form</h2>
+            <form>
+                <div class="inputbox">
+                    <span>Username</span> <br>
+                    <input type="text" value="" id="username" required>
+                </div>
+                <div class="inputbox">
+                    <span>E-mail</span><br>
+                    <input type="email" value="" id="email" required>
+                </div>
+                <div class="inputbox">
+                    <span>Phone Number</span><br>
+                    <input type="text" value="" id="phone" required>
+                </div>
+                <input type="submit" value="Submit" class="sub" id="submit">
+            </form>
+        </div>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDQVGlpM2mfBZdzIAKdjT3BiSl8nIB8K5U",
+            authDomain: "form-1630d.firebaseapp.com",
+            databaseURL: "https://form-1630d-default-rtdb.firebaseio.com",
+            projectId: "form-1630d",
+            storageBucket: "form-1630d.appspot.com",
+            messagingSenderId: "537752869169",
+            appId: "1:537752869169:web:e11baba31b0e2642097810",
+            measurementId: "G-8DH70CL0KN"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+
+        import { getDatabase, set, ref} from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"
+
+        const db = getDatabase()
+
+        document.getElementById("submit").addEventListener('click', function (e) {
+            e.preventDefault();
+            set(ref(db, 'user/' + document.getElementById("username").value),
+                {
+                    username: document.getElementById("username").value,
+
+                    email: document.getElementById("email").value,
+                    phone_number: document.getElementById("phone").value
+                });
+            alert("Login Sucessfull  !");
+        })
+    </script>
+</body>
+
+</html>
