@@ -28,8 +28,8 @@
     align-items: center;
     gap: 20px;
     border-radius: 5px;
-    background-color: var(--main-gray-clr);
     width: 200px;
+    cursor: pointer;
 }
 
 img {
@@ -40,12 +40,17 @@ img {
 .search-box {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     border: 2px solid var(--sub-gray-clr);
     border-radius: 5px;
     width: 200px;
-    padding: 6px 40px;
+    padding: 5px;
     list-style-type: none
+}
+
+.search-box li {
+    width: 100%;
+    padding: 5px 0px 5px 30px;
+    border-radius: 2px;
 }
 
 .input-box {
@@ -54,6 +59,7 @@ img {
     align-items: center;
     padding: 10px;
     gap: 10px;
+    border-bottom: 2px solid var(--main-gray-clr);
 }
 
 .input-box input {
@@ -62,4 +68,8 @@ img {
 
 .search-box li:hover {
     background-color: var(--sub-gray-clr);
+}
+
+.select-box:hover {
+    background-color: var(--main-gray-clr);
 }
