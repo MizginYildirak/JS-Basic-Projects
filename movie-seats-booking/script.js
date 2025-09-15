@@ -3,7 +3,7 @@ const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
 
-let ticketPrice = +movieSelect.value; 
+let ticketPrice = +movieSelect.value;
 
 movieSelect.addEventListener("change", (e) => {
   ticketPrice = +e.target.value;
